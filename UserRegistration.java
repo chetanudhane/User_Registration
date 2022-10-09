@@ -25,7 +25,7 @@ public class UserRegistration {
 			System.out.println("Mail Id : " + emailId);
 
 		} else {
-			System.out.println("Invalid Type Of Name...");
+			System.out.println("Invalid Type Of Mail ID...");
 		}
 
 		if (fName && lName) {
