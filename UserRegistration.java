@@ -14,25 +14,40 @@ public class UserRegistration {
 		String lastName = sc.next();
 		System.out.println("Enter Mail Id...");
 		String emailId = sc.next();
+		System.out.println("Enter Mobile Number...");
+		String mobileNumber = sc.next();
 
-		boolean fName;
-		boolean lName, email;
+		boolean fName, lName;
+		boolean email, mobile;
 
 		fName = firstName.matches(regex);
 		lName = lastName.matches(regex);
 		email = emailId.matches("^[A-Za-z0-9+_.-]+@(bl+.+co+.+)$");
+		mobile = mobileNumber.matches("^(0|91)[6-9][\\d]{9}");
+
+		if (fName) {
+			System.out.println("Fisrt Name : " + firstName);
+
+		} else {
+			System.out.println("Invalid Type Of First Name...");
+		}
+		if (lName) {
+			System.out.println("Last Name : " + lastName);
+
+		} else {
+			System.out.println("Invalid Type Of Last Name...");
+		}
 		if (email) {
 			System.out.println("Mail Id : " + emailId);
 
 		} else {
-			System.out.println("Invalid Type Of Mail ID...");
+			System.out.println("Invalid Type Of Mail Id...");
 		}
-
-		if (fName && lName) {
-			System.out.println("Fisrt Name : " + firstName + "\nLast Name : " + lastName);
+		if (mobile) {
+			System.out.println("Mobile Number : " + mobileNumber);
 
 		} else {
-			System.out.println("Invalid Type Of Name...");
+			System.out.println("Invalid Type Of Mobile Number...");
 		}
 
 	}
