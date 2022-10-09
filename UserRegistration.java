@@ -8,13 +8,19 @@ public class UserRegistration {
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter First Name...");
-		String fName = sc.next();
+		String firstName = sc.next();
+		System.out.println("Enter Last Name...");
+		String lastName = sc.next();
 
-		boolean result;
-		result = fName.matches("^[A-Z][a-z]{3,}$");
+		boolean fName;
+		boolean lName;
 
-		if (result) {
-			System.out.println("Fisrt Name Is Correct...");
+		fName = firstName.matches("^[A-Z][a-z]{3,}$");
+		lName = lastName.matches("^[A-Z][a-z]{3,}$");
+
+		if (fName && lName) {
+			System.out.println("Fisrt Name : " + firstName + "\nLast Name : " + lastName);
+
 		} else {
 			System.out.println("Invalid Type Of Name...");
 		}
