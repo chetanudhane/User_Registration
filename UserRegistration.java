@@ -8,10 +8,10 @@ public class UserRegistration {
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter First Name...");
-		String fName = sc.next();
+		String firstName = sc.next();
 
 		boolean result;
-		result = fName.matches("^[A-Z][a-z]{3,}$");
+		result = firstName.matches("^[A-Z][a-z]{3,}$");
 
 		if (result) {
 			System.out.println("Fisrt Name Is Correct...");
