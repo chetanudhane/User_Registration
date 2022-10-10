@@ -25,7 +25,7 @@ public class ValidationOperations {
 		String password = sc.next();
 
 		boolean pass;
-		pass = password.matches("(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]{8,}$");
+		pass = password.matches("(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&+=])[A-Za-z0-9].{8,}$");
 		if (pass) {
 			System.out.println("Password : " + password);
 
