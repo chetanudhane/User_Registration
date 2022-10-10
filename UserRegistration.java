@@ -6,5 +6,7 @@ public class UserRegistration {
 
 		ValidationOperations validation = new ValidationOperations();
 		validation.validateDetails();
+		validation.validateMobileNumber();
+		validation.validatePassword();
 	}
 }
